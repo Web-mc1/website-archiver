@@ -13,6 +13,17 @@ npm start
 
 Open <http://localhost:3000>.
 
+## Deploy on Render
+
+This repository includes a `render.yaml` Blueprint configuration. To publish it:
+
+1. Sign in to [Render](https://render.com/) and connect your GitHub account.
+2. Choose **New** → **Blueprint** and select `Web-mc1/website-archiver`.
+3. Review the `website-archiver` web service and choose **Apply**.
+4. Wait for the deployment to finish, then open the `onrender.com` URL Render provides.
+
+The service uses the free plan, which may sleep when idle. You need a Render account and must authorize access to the private GitHub repository.
+
 ## What it archives
 
 - Up to 10 same-origin HTML pages
