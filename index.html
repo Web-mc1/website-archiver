@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101827" />
+    <meta name="description" content="Save a public website you are authorized to archive as a ZIP file." />
+    <title>Website Archiver</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="intro">
+        <div class="eyebrow"><span class="dot"></span> PUBLIC WEBSITE ARCHIVER</div>
+        <h1>Take a website<br /><span>with you.</span></h1>
+        <p>Enter a public website URL to collect a limited set of its pages and static files into a ZIP download.</p>
+      </header>
+
+      <section class="panel" aria-labelledby="form-title">
+        <h2 id="form-title">Create an archive</h2>
+        <p class="panel-copy">Works best with public, mostly static websites.</p>
+        <form id="archive-form">
+          <label for="website-url">Website URL</label>
+          <div class="input-row">
+            <input id="website-url" name="url" type="url" placeholder="https://example.com" autocomplete="url" required />
+            <button id="submit-button" type="submit"><span>Build ZIP</span><span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+        <div id="status" class="status" role="status" aria-live="polite">Ready when you are.</div>
+        <a id="download-link" class="download-link" hidden>Download website-archive.zip <span aria-hidden="true">↓</span></a>
+        <p class="notice"><strong>Use responsibly.</strong> Only archive websites you own or have permission to download. This tool cannot access private or server-side files.</p>
+      </section>
+      <footer>Pages and files are limited to keep downloads manageable.</footer>
+    </main>
+  </body>
+</html>
